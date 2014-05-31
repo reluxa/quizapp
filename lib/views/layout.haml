@@ -1,0 +1,32 @@
+!!!
+%html
+    %head
+        %title HiddenPeak Quiz
+        %link(rel="stylesheet" href="/css/main.css")
+        %link(rel="stylesheet" href="/css/body.css")
+    %body
+        #center
+            %h1 HiddenPeak Quiz
+            %ul(id="tablist")
+                - if current_user != nil && !current_user.guest?
+                    %li
+                        %a(href="/question/add") Add
+                    %li
+                        %a(href="/question/list") List
+                    %li
+                        %a(href="/quiz/start") Start
+                    %li
+                        %a(href="/") Statistics
+                    %li
+                        %a(href="/users/#{current_user.id}/edit") Password
+                    %li
+                        %a(href="/logout") Logout
+                - else
+                    %li
+                        %a(href="/") Statistics
+                    %li
+                        %a(href="/login") Login
+            #container
+                #content
+                    =yield
+                    #footer(align="right")Peter Bagrij, 2011

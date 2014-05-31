@@ -1,0 +1,19 @@
+- qs.each do |q|
+    .questions
+        .title= q.id.to_s + "." + q.title
+        %table(class="quiz")
+            - for i in 0..2
+                %tr
+                    %td(class="tick")= "✔" if (q.owner.id == current_user.id && q.answers[i] != nil && q.answers[i] == q.correct)
+                    %td= get_letter(i)+") " + q.answers[i].mtext unless q.answers[i] == nil
+        - if q.owner.id == current_user.id
+            %table
+                %tr
+                    %td
+                        %form{:action=>"/question/modify", :method=>"post"}
+                            %input{:type=>"hidden", :name=>"qid", :value=>"#{q.id}"}
+                            %input{:class=>"groovybutton", :type=>"submit", :value=>"modify"}
+                    %td
+                        %form{:action=>"/question/delete", :method=>"post"}
+                            %input{:type=>"hidden", :name=>"qid", :value=>"#{q.id}"}
+                            %input{:class=>"groovybutton", :type=>"submit", :value=>"delete"}

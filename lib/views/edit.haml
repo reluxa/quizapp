@@ -1,0 +1,13 @@
+%form{:action=>( q.id == nil ? "/question/create" : "/question/update"), :method=>"post"}
+    .questions
+        %p Question
+        %input{:type=>"text", :name=>"quiz[q]", :size=>"100", :value=>"#{q.title}"}
+        %input{:type=>"hidden", :name=>"qid", :value=>"#{q.id}"}
+        %p Answers
+        - for i in 0..2
+            = get_letter(i) + ")"
+            %input{:type=>"text", :name=>"quiz[a#{i}]", :size=>"80", :value=>(q.answers[i] == nil ? "" : q.answers[i].mtext)}
+            %input{:type=>"radio", :name=>"quiz[r]", :value=>"#{i}", :checked=>(q.answers[i] != nil && q.correct == q.answers[i])}
+            %br
+    %br
+    %input{:class=>"groovybutton", :type=>"submit", :value=>"Save"}

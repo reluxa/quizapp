@@ -1,0 +1,21 @@
+.questions
+    %form{:action=>"/quiz/route", :method=>"post"}
+        .title= q.title
+        %input{:type=>"hidden", :name=>"qid", :value=>"#{q.id}"}
+        %table{:class=>"quiz"}
+            - for i in 0..(q.answers.size-1)
+                %tr
+                    %td= get_letter(i) +") " + q.answers[i].mtext unless q.answers[i] == nil
+                    %td
+                        %input{:type=>"radio", :name=>"quiz_#{q.id}", :value=>"#{q.answers[i].id}", :checked=>(q.answers[i].id.to_s == selected)}
+        %table
+            %tr
+                - if (is_prev)
+                    %td
+                        %input{:class=>"groovybutton", :type=>"submit", :name=>"prev", :value=>"Previous"}
+                - if (is_next)
+                    %td
+                        %input{:class=>"groovybutton", :type=>"submit", :name=>"next", :value=>"Next"}
+                - if (is_end)
+                    %td
+                        %input{:class=>"groovybutton", :type=>"submit", :name=>"finish", :value=>"End"}

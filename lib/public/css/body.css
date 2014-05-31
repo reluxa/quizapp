@@ -1,0 +1,45 @@
+#content {
+   margin: 12px;
+}
+
+.title {
+    font: bold 12px Verdana;
+}
+
+table.quiz {
+    font: 12px Verdana;
+}
+
+table.quiz td.tick {
+    font: bold 12px Verdana;
+    color:green;
+}
+
+input.groovybutton
+{
+color: #000;
+background: #ffa20f;
+border: 1px outset #781351;
+border-style:solid;
+}
+
+
+.submit input
+{
+    margin-left: 4.5em;
+}
+
+input
+{
+    color: #781351;
+    background: #fee3ad;
+    border: 1px solid #781351;
+    font: bold 12px Verdana;
+}
+
+.questions
+{
+    border: 1px solid #781351;
+    padding: 6px 6px;
+    margin: 6px;
+}

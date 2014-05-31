@@ -1,0 +1,97 @@
+body {
+	margin: 0;
+	padding: 0;
+background: rgb(178,225,255); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(190,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(190,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(190,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(190,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(190,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
+background: linear-gradient(left,  rgba(190,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=1 ); /* IE6-9 */
+
+
+
+/*	background: #000 url(../images/background.jpg) center center no-repeat; */
+/*        background-image: -moz-linear-gradient(left, #FFFFFF 0%, #00A3EF 100%); */
+/*	background-attachment:fixed; */
+	-moz-background-size: cover;
+	background-size: cover;
+	background-color:rgb(255,255,255);
+        font: bold 12px Verdana;
+	text-align: center;
+	overflow-y:scroll;
+}
+
+#center {
+	margin: 0px auto;
+	width: 800px;
+	text-align: left;
+}
+
+
+#tablist{
+margin-left: 0;
+margin-bottom: 3px;
+margin-top: 0.1em;
+padding: 0px;
+text-align: left;
+}
+
+#tablist li{
+list-style: none;
+display: inline;
+}
+
+#tablist li a{
+text-decoration: none;
+padding: 3px 0.5em;
+margin-right: 2px;
+
+background: transparent url(../images/black75.png);
+background: rgba(0, 0, 0, 0.2) none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='../images/black75.png');
+background-image:url(../images/black75.png);
+
+border-top-left-radius: 8px 8px;
+border-top-right-radius: 8px 8px;
+-moz-border-radius-topleft: 8px 8px;
+-moz-border-radius-topright: 8px 8px;
+}
+
+#tablist li a:link, #tablist li a:visited{
+background: transparent url(../images/black75.png);
+background: rgba(0, 0, 0, 0.2) none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='../images/black75.png');
+background-image:url(../images/black75.png);
+}
+
+#tablist li a:hover{
+color: black;
+background: lightyellow;
+border-color: navy;
+}
+
+#tablist li a.current{
+background: lightyellow;
+}
+
+#container {
+	margin: 0px auto;
+	width: 800px;
+	float: left;
+
+	background: transparent url(../images/black75.png);
+	background: rgba(0, 0, 0, 0.2) none;
+
+        border-top-right-radius: 12px 12px;
+        -moz-border-radius-topright: 12px 12px;
+        border-bottom-right-radius: 12px 12px;
+ 	-moz-border-radius-bottomright:12px 12px;
+	border-bottom-left-radius: 12px 12px;
+	-moz-border-radius-bottomleft: 12px 12px;
+
+  	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='../images/black75.png');
+	background-image:url(../images/black75.png);
+
+}
